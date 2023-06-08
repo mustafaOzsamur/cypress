@@ -11,11 +11,15 @@ describe('Temel Komutlar', () => {
 
 
 
+    
+
     it('Temel Komutlar cy.title Kullanimi', () => {
         cy.title().should('eq','cypress.io') // title tam esitlik olursa dogrular 
         cy.title().should('include','cypress') // title icerinde cypress geciyorsa dogrular
         cy.title().should('contain','cypress') // title icerinde cypress geciyorsa dogrular
     });
+
+
 
 
 
@@ -29,8 +33,9 @@ describe('Temel Komutlar', () => {
        cy.location('protocol').should('eq',"https") // gidilen protocol' dogrular
        cy.location('hostname').should('eq',"https://example.cypress.io/") // tam esitlikte dogrular
        cy.location('hostname').should('include',"cypress.io") // cypress.io icerirse hostname dogrular
-
     });
+
+
 
 
 
@@ -43,8 +48,21 @@ describe('Temel Komutlar', () => {
         cy.get('.dropdown-menu-list') // attribute'si class lar icin '.' konur
         cy.get('div.button')
         cy.get('ul li:first')
-
-
-        
     });
+
+
+
+
+
+    it('Temel Komutlar cy.log Kullanimi', () => {
+        cy.log('Temel Komut cy.log Kullanimi') // Consola mesaj yazmak icindir, dogrulama amacli kullanilmaz
+        cy.log('Bir mesaj',['bir mesaj','iki mesaj','uc mesaj']) // cikti;  Bir mesaj,[bir mesaj, iki mesaj, uc mesaj]
+
+    });
+    it.skip('', () => { // it.skip ==> bu test ignore edilecek ve calismayacak    
+    });
+    it.only('', () => { // it.only ==> sadece bu it blogunda bulunun testler calisacak   
+    });
+
+
 });
