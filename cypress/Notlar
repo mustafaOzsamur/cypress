@@ -1,0 +1,14 @@
+TERMINALDE CALISMAK ICIN ONCE package.json SAYFASINA SCRIPTS EKLIYORUZ VE EKLEDIGIMI SCRIPTSLERI ASAGIDAKI GIBI KULLANIYORUZ
+
+npm run cy:open   ==> Test Runner'i acar
+npm run cy:run    ==> e2e icerisinde bulunan bütün file leri calistirir
+npm run cy:spec .\cypress\e2e\1-getting-started\todo.cy.js ==>istedigimiz File yi calistirir
+npm run cy:test:chrome ==> browser secmek icin
+npm run cy:verify ==> cypress version görmek icin
+
+
+VIEWPORT KULLANIMI
+
+cy.viewport(1200,1000) ==> nummer kullanarak Ekran ayarlari icin
+cy.viewport('macbook-16') ==> string kullanarak ekran ayarlari icin
+cy.viewport('iphone-se2') ==> telefonlar icin kullanim
