@@ -1,22 +1,13 @@
 {
-  "dependencies": {
-    "cypress": "^12.13.0"
-  },
-
-
-
   "scripts": {
-    "cy:open":"cypress open",
+    "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "cy:spec":"cypress run --spec",
-    "cy:test:chrome":"cypress run --browser chrome",
-    "cy:test:edge":"cypress run --browser edge",
-    "cy:verify":"cypress verify"
-    
+    "cy:spec": "cypress run --spec",
+    "cy:test:chrome": "cypress run --browser chrome",
+    "cy:test:edge": "cypress run --browser edge",
+    "cy:verify": "cypress verify"
+  },
+  "devDependencies": {
+    "cypress": "^12.14.0"
   }
-
-
-  
 }
-
-   
