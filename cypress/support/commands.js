@@ -42,6 +42,18 @@
 //method olusturup locate leri oraya atariz daha 
 //sonra test class'imiyda bu method ismi ile cagiririz 
 //ve degerleri burada gireriz
+import 'cypress-file-upload'
+require('cypress-delete-downloads-folder').addCustomCommand(); // Download Folder Delete icin
+
+
+
+
+
+
+
+
+
+
 
 
 import customCommandsLogin from "../pageObjectModel/customCommandsLogin"
