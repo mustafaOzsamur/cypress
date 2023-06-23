@@ -4,6 +4,7 @@ const { removeDirectory } = require('cypress-delete-downloads-folder'); // Downl
 
 
 module.exports = defineConfig({
+  projectId: '6pgfn2',
   viewportHeight:1200,
   viewportWidth: 1500,
   reporter:'cypress-mochawesome-reporter',
