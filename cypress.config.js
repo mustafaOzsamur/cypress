@@ -6,14 +6,24 @@ const { removeDirectory } = require('cypress-delete-downloads-folder'); // Downl
 module.exports = defineConfig({
   viewportHeight:1200,
   viewportWidth: 1500,
+  reporter:'cypress-mochawesome-reporter',
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
 
+      // implement node event listeners here
+      require('cypress-mochawesome-reporter/plugin')(on)
       on('task', { removeDirectory }) // Delete Download Folder icin
 
     },
+    baseUrl:"https://www.amazon.com",
 
-    baseUrl:"https://www.amazon.com" 
+
+    env:{
+      hideXhr:true,
+      amazon:"https://www.amazon.de",
+      google:"https://www.google.com",
+      saucedemo:"https://www.saucedemo.com"
+    }
+    
   },
 });

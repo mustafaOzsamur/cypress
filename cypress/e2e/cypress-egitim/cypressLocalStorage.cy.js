@@ -27,7 +27,6 @@ describe('Cypress Local Storage', () => {
         cy.clearLocalStorage()
 
 
-
         })
 
                 

@@ -46,23 +46,24 @@ import 'cypress-file-upload'
 require('cypress-delete-downloads-folder').addCustomCommand(); // Download Folder Delete icin
 
 
-
-
-
-
-
-
-
-
-
-
 import customCommandsLogin from "../pageObjectModel/customCommandsLogin"
 Cypress.Commands.add('login',(username,password)=>{
     customCommandsLogin.signupBtn.click()
     customCommandsLogin.usernameField.type(username)
     customCommandsLogin.passwordField.type(password)
     customCommandsLogin.loginBtn.click()
-   
+})
 
+// With Session
 
+Cypress.Commands.add('loginWithSession',(username,password)=>{
+    cy.session([username,password],()=>{
+        cy.visit('https://react-redux.realworld.io/')
+        cy.contains('Sign in').click()
+        cy.get('input[placeholder="Email"]').type(username)
+        cy.get('input[placeholder="Password"]').type(password)
+        cy.get('button[type="submit"]').click()
+        cy.get('nav > div > ul > li:nth-child(2) > a').should('be.visible').and('contain','New Post')  
+    })
+ 
 })
