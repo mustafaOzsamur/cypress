@@ -23,7 +23,14 @@ module.exports = defineConfig({
       amazon:"https://www.amazon.de",
       google:"https://www.google.com",
       saucedemo:"https://www.saucedemo.com"
-    }
-    
+    },
+    experimentalWebKitSupport:true,
+
+    experimentalRunAllSpecs: true,
+
+    watchForFileChanges:true, // kaydettikten sonra testlerin otomatik olarak run etmemesi icin
+    // aktif hale getirmek icin false yapmak gerekir
+
+    experimentalStudio: true
   },
 });

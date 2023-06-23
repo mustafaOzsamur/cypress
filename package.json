@@ -9,10 +9,11 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.0.2",
-    "cypress": "^12.14.0",
+    "cypress": "^12.15.0",
     "cypress-delete-downloads-folder": "^0.0.2",
     "cypress-mochawesome-reporter": "^3.5.1",
-    "cypress-slow-down": "^1.2.1"
+    "cypress-slow-down": "^1.2.1",
+    "playwright-webkit": "^1.35.1"
   },
   "dependencies": {
     "cypress-file-upload": "^5.0.8",
